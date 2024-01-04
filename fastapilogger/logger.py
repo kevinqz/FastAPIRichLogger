@@ -84,11 +84,10 @@ class FastAPILogger(BaseHTTPMiddleware):
         return json.loads(b"".join(body))
 
     def _print_log(self, log_data):
-        request_start_time = time.strftime('%H:%M:%S:%m', time.localtime(log_data.start_time))
-        request_end_time = time.strftime('%H:%M:%S:%m', time.localtime(time.time()))
+        request_start_time = time.strftime('%H:%M:%S', time.localtime(log_data.start_time)) + f'.{int((log_data.start_time - int(log_data.start_time)) * 1000):03}'
+        request_end_time = time.strftime('%H:%M:%S', time.localtime(time.time())) + f'.{int((time.time() - int(time.time())) * 1000):03}'
 
-        self.console.rule(f"[{log_data.color}] Request ID: {log_data.log_id} > {log_data.level} | Status Code: {log_data.status_code} [/]", style=log_data.color)
-        # self.console.print(f"[white]Request Started at: {request_start_time} - End: {request_end_time} - Total Execution Time: {log_data.execute_time} milliseconds[/]")
+        self.console.rule(f"[{log_data.color}]Request Log ID: {log_data.log_id} > {log_data.level} | Status Code: {log_data.status_code} [/]", style=log_data.color)
         self.console.print(f"[white]Method: {log_data.request_method}[/]")
         self.console.print(f"[white]Authorization: {log_data.authorization}[/]")
         self.console.print(f"[white]Content-Type: {log_data.content_type}[/]")
@@ -98,5 +97,5 @@ class FastAPILogger(BaseHTTPMiddleware):
         self.console.print("Body:")
         self.console.print(json.dumps(log_data.body, indent=4))
         # self.console.rule(f"[{log_data.color}][/]", style=log_data.color)
-        self.console.rule(f"[{log_data.color}]Request Started at: {request_start_time} - Ended at: {request_end_time} - Total Execution Time: {log_data.execute_time} milliseconds[/]")
+        self.console.rule(f"[{log_data.color}]Start: {request_start_time} - End: {request_end_time} - Total Execution Time: {log_data.execute_time} milliseconds[/]")
 
