@@ -1,13 +1,12 @@
 Metadata-Version: 2.1
 Name: fastapirichlogger
-Version: 0.1.1
+Version: 0.1.3
 Summary: An awesome logger for FastAPI.
 Home-page: https://github.com/kevinqz/fastapirichlogger
 Author: Kevin Saltarelli
 Author-email: kevinqz@gmail.com
 License: LICENSE.md
 Description-Content-Type: text/markdown
-License-File: LICENSE.md
 
 # FastAPIRichLogger
 
