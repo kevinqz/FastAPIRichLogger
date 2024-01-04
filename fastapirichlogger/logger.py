@@ -3,12 +3,12 @@ import time
 import json
 import uuid
 from fastapi import Request, Response
-from fastapilogger.core.config import settings
+from fastapirichlogger.core.config import settings
 from starlette.concurrency import iterate_in_threadpool
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.types import ASGIApp
 
-class FastAPILogger(BaseHTTPMiddleware):
+class FastAPIRichLogger(BaseHTTPMiddleware):
     def __init__(self, app: ASGIApp):
         super().__init__(app)
         self.console = Console()

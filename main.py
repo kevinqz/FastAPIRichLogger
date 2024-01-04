@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from fastapilogger import FastAPILogger
+from fastapirichlogger import FastAPIRichLogger
 
 app = FastAPI()
 
-app.add_middleware(FastAPILogger)
+app.add_middleware(FastAPIRichLogger)
 
 @app.get("/")
 def read_root():
