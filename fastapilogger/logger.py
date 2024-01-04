@@ -84,8 +84,8 @@ class FastAPILogger(BaseHTTPMiddleware):
         return json.loads(b"".join(body))
 
     def _print_log(self, log_data):
-        request_start_time = time.strftime('%H:%M:%S', time.localtime(log_data.start_time)) + f'.{int((log_data.start_time - int(log_data.start_time)) * 1000):03}'
-        request_end_time = time.strftime('%H:%M:%S', time.localtime(time.time())) + f'.{int((time.time() - int(time.time())) * 1000):03}'
+        request_start_time = time.strftime('%H:%M:%S', time.localtime(log_data.start_time)) + f'.{int((log_data.start_time - int(log_data.start_time)) * 1000):04}'
+        request_end_time = time.strftime('%H:%M:%S', time.localtime(time.time())) + f'.{int((time.time() - int(time.time())) * 1000):04}'
 
         self.console.rule(f"[{log_data.color}]Request Log ID: {log_data.log_id} > {log_data.level} | Status Code: {log_data.status_code} [/]", style=log_data.color)
         self.console.print(f"[white]Method: {log_data.request_method}[/]")
