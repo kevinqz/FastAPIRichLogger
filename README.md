@@ -30,8 +30,15 @@ To use FastAPIRichLogger in your FastAPI application, follow these steps:
 - **Execution Time Tracking**: Monitor the time taken for each request to process.
 - **Automatic Log ID Assignment**: Each request gets a unique log identifier for easier tracking.
 
-## Configuration
-FastAPIRichLogger allows configuration through environment variables. Set `DEBUG=true` to enable detailed logging.
+## Example Images
+
+Below are example images showing the FastAPIRichLogger in action:
+
+- **Success Log Example**:
+  ![Success Log](https://gcdnb.pbrd.co/images/CNZuN81Gf4Hn.png)
+
+- **Error Log Example**:
+  ![Error Log](https://gcdnb.pbrd.co/images/QfpPhSLCf1Xy.png)
 
 ## Contributing
 Contributions are what make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
