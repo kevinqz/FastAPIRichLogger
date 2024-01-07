@@ -35,10 +35,10 @@ To use FastAPIRichLogger in your FastAPI application, follow these steps:
 Below are example images showing the FastAPIRichLogger in action:
 
 - **Success Log Example**:
-  ![Success Log](https://gcdnb.pbrd.co/images/CNZuN81Gf4Hn.png)
+![Success Log](https://gcdnb.pbrd.co/images/CNZuN81Gf4Hn.png)
 
 - **Error Log Example**:
-  ![Error Log](https://gcdnb.pbrd.co/images/QfpPhSLCf1Xy.png)
+![Error Log](https://gcdnb.pbrd.co/images/QfpPhSLCf1Xy.png)
 
 ## Contributing
 Contributions are what make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
